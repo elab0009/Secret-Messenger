@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="" content="default-src 'self' data: gap:  ''; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content: https: griffis.edumedia.ca ;" />
+    <meta charset="UTF-8">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <!-- Include the compiled Ratchet CSS -->
+    <link href="css/ratchet.min.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <title>Secret Messenger</title>
+</head>
+
+<body>
+    <header class="bar bar-nav"> <a id='addMsg' class="btn btn-link btn-nav pull-right" href="#Addmodal">Send<span class="icon icon-right-nav"></span></a>
+        <h1 class="title">
+        Secret Messenger</h1> </header>
+    <div class="content">
+        <ul class="table-view" id="Messenger">
+            <li class="table-view-cell">
+                <a class="navigate-right" href="#detailsmodal">
+                    <div class="media-body"> <span class="name">Name</span> </div>
+                </a>
+            </li>
+        </ul>
+        <div id="reload"></div>
+    </div>
+    <!-- new messenge MODAL -->
+    <div id="Addmodal" class="modal">
+        <header class="bar bar-nav"> 
+           <a id="addBack" class="btn btn-link btn-nav pull-left" href="#Addmodal"><span class="icon icon-left-nav"></span>Back</a> 
+            <h1 class="title">Add Messenger</h1> </header>
+        <div class="content">
+            <div class="content-padded">
+                <select id="userlist">
+                    <option value="select">Select</option>
+                </select>
+                <textarea id ="imgMsg" rows="5" placeholder="Add Messgenger"></textarea>
+                <p class="content-padded"> 
+                   <img id="img" src="img/placeholder.png" class="hidden center" alt="">
+                    <button id="takeImg" class="btn btn-positive btn-block btn-outlined"> <span class="icon icon-play"></span> Add Image
+                        <!-- dispatch click to the close button -->
+                    </button> <button id="sendMail" class="btn btn-positive btn-block btn-outlined"> <span class="icon icon-play"></span> Send Message
+                        <!-- dispatch click to the close button -->
+                    </button>
+                    
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- loginIn messenge MODAL -->
+    <div id="loginModal" class="modal active">
+        <header class="bar bar-nav">
+            <h1 class="title">Secret Messenger</h1> </header>
+        <div class="content">
+            <div class="content-padded">
+                <div class="input-row">
+                    <label>User</label>
+                    <input id="userName" type="text" placeholder="Username" /> </div>
+                <div class="input-row">
+                    <label>Email</label>
+                    <input id="userEmail" type="text" placeholder="Email" /> </div>
+                <p class="content-padded">
+                    <button id="logIn" class="btn btn-positive btn-block btn-outlined"> <span class="icon icon-home"></span> Log In
+                        <!-- dispatch click to the close button -->
+                    </button>
+                    <button id="register" class="btn btn-primary btn-block"> <span class="icon icon-plus"></span> Register Here!
+                        <!-- dispatch click to the close button -->
+                    </button>
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- detailsmodal -->
+    <div id="detailsmodal" class="modal">
+        <header class="bar bar-nav"> 
+           <a id="back" class="btn btn-link btn-nav pull-left" href="#detailsmodal">
+           <span class="icon icon-left-nav">
+            
+           </span>Back</a>
+            <a id="sender" class="btn btn-link btn-nav pull-right" href="#detailsmodal">Send<span class="icon icon-right-nav"></span></a>
+            <h1 class="title">Secret Messenger</h1> </header>
+        <div class="content">
+            <div class="content-padded">
+                <div class="center">
+                    <h1 id="h1">h. Heading</h1> 
+                    <img id="pic" src="" alt="Image"  crossorigin="anonymous"> 
+                    <span id="fillDetail">ItemName</span> 
+                    </div>
+                    <p class="content-padded">
+                    <button id="deleteItem" class="btn btn-negative btn-block btn-outlined"> 
+                       <span class="icon icon-close"></span>
+                        Delete
+                        <!-- dispatch click to the close button -->
+                    </button>
+                </p>
+            </div>
+        </div>
+    </div>
+        <!--login modal-->
+        <script type="text/javascript" src="cordova.js"></script>
+        <!-- include the compiled Ratchet JS -->
+        <script src="js/ratchet.min.js"></script>
+        <script src="js/bits-1.js"></script>
+        <script src="js/index.js"></script>
+</body>
+
+</html>
